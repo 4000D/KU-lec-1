@@ -9,7 +9,6 @@ contract PrivateBank {
 
   function cashOut(uint _am) public {
       if(_am<=balances[msg.sender]) {
-
           bool suc;
           bytes memory res;
           (suc, res) = msg.sender.call.value(_am)("");
